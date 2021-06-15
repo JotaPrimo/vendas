@@ -1,0 +1,59 @@
+{% extends 'templates/template.php.twig' %}
+
+{% block formBusca %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="card mt-3">
+
+            <div class="card-header">
+                Empréstimos
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Livros</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    {% for emp in  emprestimos %}
+                        <tr>
+                            <th scope="row"> {{ emp.id }} </th>
+                            <td> {{ emp.nome }} </td>
+                            <td> {{ emp.email }} </td>
+                            <td>
+
+
+                            </td>
+
+                        </tr>
+
+                        {{ include('componentes/usuarios/modal-encerrar.php.twig.twig') }}
+
+
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,6 @@
+php -S localhost:8000 -t public/
+docker-compose up db
+
+acesso banco
+user : root
+passw : password

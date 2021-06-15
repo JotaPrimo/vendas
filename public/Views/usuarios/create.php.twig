@@ -1,0 +1,67 @@
+{% extends 'templates/template.php.twig' %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card mt-5">
+
+        <div class="card-header">
+            Novo usuário
+        </div>
+
+        <div class="card-body">
+
+                <form action="/usuarios/store" method="post">
+
+                    <div class="form-row">
+
+                        <div class="col-4">
+                            <label for="inputAddress2">Nome</label>
+                            <input type="text" class="form-control" name="nome" required id="email" placeholder="Nome...">
+
+                        </div>
+
+                       <div class="col-4">
+                           <label for="inputAddress2">Email</label>
+                           <input type="email" class="form-control" name="email" required id="email" placeholder="Email...">
+
+                       </div>
+
+                        <div class="col-4">
+                            <label for="inputAddress">Senha</label>
+                            <input type="password" class="form-control" name="senha" required id="senha" placeholder="Senha...">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row mt-3">
+                        <div class="col">
+                            <label for="inputAddress2">CPF</label>
+                            <input type="text" class="form-control" name="cpf" required id="cpf" placeholder="CPF">
+                        </div>
+
+                        <div class="col">
+                            <label for="inputAddress2">Nascimento</label>
+                            <input type="date" class="form-control" name="dt_nascimento" required id="dt_nascimento" placeholder="CPF">
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-2">Salvar</button>
+
+
+                </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

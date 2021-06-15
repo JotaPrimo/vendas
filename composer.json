@@ -1,0 +1,30 @@
+{
+  "name": "vendor_name/biblioteca",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "jota",
+      "email": "email@example.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Biblioteca\\Models\\": "app/Domain/Models/",
+      "Biblioteca\\Controllers\\": "app/Domain/Constrollers/",
+      "Biblioteca\\Services\\": "app/Domain/Services/",
+      "Biblioteca\\Database\\": "app/Infra/Database/",
+      "Biblioteca\\Repositories\\": "app/Infra/Repositories/",
+      "Biblioteca\\Views\\": "public/Views/"
+    }
+  },
+  "require": {
+    "ext-pdo": "*",
+    "pecee/simple-router": "4.2.0.6",
+    "symfony/http-foundation": "^5.2",
+    "twig/twig": "^3.0",
+    "symfony/asset": "^5.2"
+
+  }
+}

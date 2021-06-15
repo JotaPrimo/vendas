@@ -1,0 +1,35 @@
+ CREATE SCHEMA `new_schema` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE `evoluindo`.`usuarios` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(45) NOT NULL,
+  `dt_cadastro` VARCHAR(45) NOT NULL,  
+  `senha` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+
+ CREATE TABLE `evoluindo`.`livros` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(45) NOT NULL,
+  `unidades` VARCHAR(45) NOT NULL,
+  `disponivel` VARCHAR(45) NOT NULL,
+  `editora` VARCHAR(45) NOT NULL,
+  `autor` VARCHAR(45) NOT NULL,
+  `codigo_nacional` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+CREATE TABLE emprestimos (
+    id INT NOT NULL AUTO_INCREMENT,
+	data_emprestimo date NOT NULL,
+    devolucao date NOT NULL,
+    livro_id int NOT NULL,
+    ativo int NOT NULL DEFAULT 1,
+    usuario_id int NOT NULL,   
+    FOREIGN KEY (livro_id) REFERENCES livros(id),
+	FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
