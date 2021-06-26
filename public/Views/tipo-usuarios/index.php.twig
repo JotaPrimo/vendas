@@ -1,0 +1,101 @@
+{% extends 'templates/template.php.twig' %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="card mt-5">
+
+            <div class="card-header">
+                Usuários
+            </div>
+
+            <div class="card-body">
+
+                <a href="/usuarios/create">
+                    <button class="btn btn-primary">Novo</button>
+                </a>
+
+                <table class="table table-hover mt-2">
+
+                    <thead>
+
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    {% for tipo in tiposUsuarios %}
+
+                        <tr>
+                            <td> {{ tipo.id }} </td>
+                            <td> {{ tipo.nome }} </td>
+                            <td> {{ tipo.email }} </td>
+
+
+                            <td>
+                                <a href="/usuarios/emprestimos/{{ tipo.id }}">
+                                    <button class="btn btn-info">
+                                        Emprestimos
+                                    </button>
+                                </a>
+
+                                <a href="/usuarios/edit/{{ tipo.id }}">
+                                    <button class="btn btn-warning">
+                                        Editar
+                                    </button>
+                                </a>
+
+
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#deletar{{ tipo.id }}">
+                                    Deletar
+                                </button>
+                                </a>
+
+                            </td>
+                        </tr>
+
+                        {{ include('componentes/usuarios/modal-deletar.php.twig') }}
+
+
+                    {% endfor %}
+
+
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+        <nav aria-label="Page navigation example" class="mt-2">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+{% endblock %}

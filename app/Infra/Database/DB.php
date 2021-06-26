@@ -11,7 +11,7 @@ class DB
     private $server = "127.0.0.1";
     private $user = "root";
     private $password = "";
-    private $db = "evoluindo";
+    private $db = "vendas";
     private string $table;
     private PDO $conn;
 
@@ -52,7 +52,7 @@ class DB
         }
     }
 
-    public function insert($values)
+    public function insert($values = [])
     {
         $binds = array_keys($values);
         $parans = array_pad([], count($values), '?');

@@ -7,44 +7,56 @@ use Exception;
 
 class UsuarioServices
 {
-    public static function encrytPassword($senha)
+
+    public static function validarPost($dados)
     {
-        return md5($senha);
-    }
+        $validation = [
+            'name' => [
+                'is_null'   => 'name is empty',
+                'is_false'  => 'name is wrong value',
+            ],
 
-    public static function checaPost($nome)
-    {
-        $erros = [];
+            'name' => [
+                'is_null'   => 'name is empty',
+                'is_false'  => 'name is wrong value',
+            ],
 
-        if ( !isset( $_POST['nome'] ) || empty( $_POST['nome'] ) ) {
+            'name' => [
+                'is_null'   => 'name is empty',
+                'is_false'  => 'name is wrong value',
+            ],
+        ];
 
-            $erros = 'Campo nome inválido';
-        }
+        $filter_rules = [
+           'nome' => FILTER_SANITIZE_STRING,
+           'email' => FILTER_SANITIZE_EMAIL,
+           'senha' => FILTER_SANITIZE_STRING,
+           'cpf' => FILTER_SANITIZE_STRING,
+           'tipoUsuario' => FILTER_SANITIZE_NUMBER_INT,
+           'status' => FILTER_SANITIZE_NUMBER_INT,
+       ];
 
-        if ( !isset( $_POST['email'] ) || empty( $_POST['email'] ) ) {
+        $dados = filter_input_array($filter_rules);
 
-            $erros = 'Campo email inválido';
-        }
-
-        if ( !isset( $_POST['senha'] ) || empty( $_POST['senha'] ) ) {
-
-            $erros = 'Campo senha inválido';
-        }
-
-        if ( !isset( $_POST['cpf'] ) || empty( $_POST['cpf'] ) ) {
-
-            $erros = 'Campo cpf inválido';
-        }
-
-        if(!empty($erros))
+        foreach ($dados as $field)
         {
-           return (new Exception('Campos com valor incorreto : ' . implode(',', $erros)));
+            if(!empty($validation[$field]))
+            {
+                continue;
+            }
+
+            if($field === null or $field === '')
+            {
+                echo $validation[$field]['is_null'];
+            }
+
+            if(!$field)
+            {
+                echo $validation[$field]['is_false'];
+            }
+
         }
 
-        return true;
-
     }
-
-
 
 }

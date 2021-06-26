@@ -9,6 +9,21 @@ SimpleRouter::group(['namespace' => 'Vendas\Controllers'], function () {
 });
 
 
+SimpleRouter::group(['prefix' => '/tipos-usuarios'], function () {
+
+    SimpleRouter::get('/', 'TipoUsuarioController@index');
+    SimpleRouter::get('/create', 'TipoUsuarioController@create');
+    SimpleRouter::get('/success', 'TipoUsuarioController@success');
+    SimpleRouter::get('/error', 'TipoUsuarioController@error');
+    SimpleRouter::get('/edit/{id}', 'TipoUsuarioController@edit');
+    SimpleRouter::post('/store', 'TipoUsuarioController@store');
+    SimpleRouter::post('/update/{id}', 'TipoUsuarioController@update');
+    SimpleRouter::post('/delete/{id}', 'TipoUsuarioController@delete');
+    SimpleRouter::get('/emprestimos/{id}', 'TipoUsuarioController@emprestimos');
+
+});
+
+
 SimpleRouter::group(['prefix' => '/usuarios'], function () {
 
     SimpleRouter::get('/', 'UsuarioController@index')->name('usuarios');

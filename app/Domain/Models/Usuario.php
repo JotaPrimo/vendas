@@ -11,7 +11,11 @@ class Usuario extends Pessoa
     private ?int $id;
     private string $email;
     private string $senha;
+    private int $status;
+    private int $tipoUsuario;
 
+    const STATUS_ATIVO = 1;
+    const STATUS_INATIVO = 0;
 
     /**
      * @return string
@@ -93,6 +97,36 @@ class Usuario extends Pessoa
         $this->senha = $senha;
     }
 
+    /**
+     * @return int
+     */
+    public function getStatus(): int
+    {
+        return $this->status;
+    }
 
+    /**
+     * @param int $status
+     */
+    public function setStatus(int $status): void
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTipoUsuario(): int
+    {
+        return $this->tipoUsuario;
+    }
+
+    /**
+     * @param int $tipoUsuario
+     */
+    public function setTipoUsuario(int $tipoUsuario): void
+    {
+        $this->tipoUsuario = $tipoUsuario;
+    }
 
 }

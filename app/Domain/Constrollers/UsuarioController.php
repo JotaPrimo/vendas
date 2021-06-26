@@ -33,7 +33,7 @@ class UsuarioController
 
     public function create()
     {
-        // renderiando a view
+
         echo $this->twig->render('usuarios/create.php.twig');
     }
 
@@ -43,7 +43,7 @@ class UsuarioController
         try {
 
             // validando post
-            $valida = UsuarioServices::checaPost($_POST['nome'], $_POST['cpf'], $_POST['email'], $_POST['senha']);
+            $valida = UsuarioServices::validarPost($_POST);
             $userRepo = new UsuarioRepository();
             $user = new Usuario();
             $user->setNome($_POST['nome']);
