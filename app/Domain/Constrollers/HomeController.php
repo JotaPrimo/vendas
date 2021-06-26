@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Biblioteca\Controllers;
+namespace Vendas\Controllers;
 
 
-use Biblioteca\Repositories\UsuarioRepository;
+use Vendas\Repositories\UsuarioRepository;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 

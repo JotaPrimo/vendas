@@ -1,5 +1,5 @@
 {
-  "name": "vendor_name/biblioteca",
+  "name": "vendor_name/vendas",
   "description": "description",
   "minimum-stability": "stable",
   "license": "proprietary",
@@ -11,12 +11,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Biblioteca\\Models\\": "app/Domain/Models/",
-      "Biblioteca\\Controllers\\": "app/Domain/Constrollers/",
-      "Biblioteca\\Services\\": "app/Domain/Services/",
-      "Biblioteca\\Database\\": "app/Infra/Database/",
-      "Biblioteca\\Repositories\\": "app/Infra/Repositories/",
-      "Biblioteca\\Views\\": "public/Views/"
+      "Vendas\\Models\\": "app/Domain/Models/",
+      "Vendas\\Controllers\\": "app/Domain/Constrollers/",
+      "Vendas\\Services\\": "app/Domain/Services/",
+      "Vendas\\Database\\": "app/Infra/Database/",
+      "Vendas\\Repositories\\": "app/Infra/Repositories/",
+      "Vendas\\Views\\": "public/Views/"
     }
   },
   "require": {

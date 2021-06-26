@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Biblioteca\Controllers;
+namespace Vendas\Controllers;
 
-use Biblioteca\Models\Usuario;
-use Biblioteca\Services\UsuarioServices;
-use Biblioteca\Repositories\UsuarioRepository;
+use Vendas\Models\Usuario;
+use Vendas\Services\UsuarioServices;
+use Vendas\Repositories\UsuarioRepository;
 use Exception;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Biblioteca\Models;
+namespace Vendas\Models;
 
 use DateTime;
 

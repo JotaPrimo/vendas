@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Biblioteca\Services;
+namespace Vendas\Services;
 
 use Exception;
 

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Biblioteca\Repositories;
+namespace Vendas\Repositories;
 
-use Biblioteca\Models\Usuario;
-use Biblioteca\Database\DB;
-use Biblioteca\Services\UsuarioServices;
+use Vendas\Models\Usuario;
+use Vendas\Database\DB;
+use Vendas\Services\UsuarioServices;
 use PDO;
 use Exception;
 

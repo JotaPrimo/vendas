@@ -7,15 +7,24 @@ namespace Composer\Autoload;
 class ComposerStaticInite00ecce03bd806ea6475d15d1be3e1ae
 {
     public static $files = array (
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Vendas\\Views\\' => 13,
+            'Vendas\\Services\\' => 16,
+            'Vendas\\Repositories\\' => 20,
+            'Vendas\\Models\\' => 14,
+            'Vendas\\Database\\' => 16,
+            'Vendas\\Controllers\\' => 19,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -46,18 +55,33 @@ class ComposerStaticInite00ecce03bd806ea6475d15d1be3e1ae
         array (
             'DI\\' => 3,
         ),
-        'B' => 
-        array (
-            'Biblioteca\\Views\\' => 17,
-            'Biblioteca\\Services\\' => 20,
-            'Biblioteca\\Repositories\\' => 24,
-            'Biblioteca\\Models\\' => 18,
-            'Biblioteca\\Database\\' => 20,
-            'Biblioteca\\Controllers\\' => 23,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vendas\\Views\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/Views',
+        ),
+        'Vendas\\Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Domain/Services',
+        ),
+        'Vendas\\Repositories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Infra/Repositories',
+        ),
+        'Vendas\\Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Domain/Models',
+        ),
+        'Vendas\\Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Infra/Database',
+        ),
+        'Vendas\\Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Domain/Constrollers',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -105,30 +129,6 @@ class ComposerStaticInite00ecce03bd806ea6475d15d1be3e1ae
         'DI\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-di/php-di/src',
-        ),
-        'Biblioteca\\Views\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/public/Views',
-        ),
-        'Biblioteca\\Services\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/Domain/Services',
-        ),
-        'Biblioteca\\Repositories\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/Infra/Repositories',
-        ),
-        'Biblioteca\\Models\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/Domain/Models',
-        ),
-        'Biblioteca\\Database\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/Infra/Database',
-        ),
-        'Biblioteca\\Controllers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/Domain/Constrollers',
         ),
     );
 

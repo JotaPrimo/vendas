@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Biblioteca\Database;
+namespace Vendas\Database;
 
 use PDO;
 use PDOException;

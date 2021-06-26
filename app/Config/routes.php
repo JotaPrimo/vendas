@@ -4,7 +4,7 @@ require_once  '../vendor/autoload.php';
 
 use Pecee\SimpleRouter\SimpleRouter;
 
-SimpleRouter::group(['namespace' => 'Biblioteca\Controllers'], function () {
+SimpleRouter::group(['namespace' => 'Vendas\Controllers'], function () {
     SimpleRouter::get('/', 'UsuarioController@index');
 });
 

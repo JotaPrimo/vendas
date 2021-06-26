@@ -6,7 +6,7 @@ require_once '../app/Config/helpers.php';
 
 use Pecee\SimpleRouter\SimpleRouter;
 
-SimpleRouter::setDefaultNamespace('\Biblioteca\Controllers');
+SimpleRouter::setDefaultNamespace('\Vendas\Controllers');
 
 // Start the routing
 SimpleRouter::start();

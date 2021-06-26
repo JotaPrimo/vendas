@@ -6,6 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Vendas\\Views\\' => array($baseDir . '/public/Views'),
+    'Vendas\\Services\\' => array($baseDir . '/app/Domain/Services'),
+    'Vendas\\Repositories\\' => array($baseDir . '/app/Infra/Repositories'),
+    'Vendas\\Models\\' => array($baseDir . '/app/Domain/Models'),
+    'Vendas\\Database\\' => array($baseDir . '/app/Infra/Database'),
+    'Vendas\\Controllers\\' => array($baseDir . '/app/Domain/Constrollers'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
@@ -18,10 +24,4 @@ return array(
     'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
     'Invoker\\' => array($vendorDir . '/php-di/invoker/src'),
     'DI\\' => array($vendorDir . '/php-di/php-di/src'),
-    'Biblioteca\\Views\\' => array($baseDir . '/public/Views'),
-    'Biblioteca\\Services\\' => array($baseDir . '/app/Domain/Services'),
-    'Biblioteca\\Repositories\\' => array($baseDir . '/app/Infra/Repositories'),
-    'Biblioteca\\Models\\' => array($baseDir . '/app/Domain/Models'),
-    'Biblioteca\\Database\\' => array($baseDir . '/app/Infra/Database'),
-    'Biblioteca\\Controllers\\' => array($baseDir . '/app/Domain/Constrollers'),
 );

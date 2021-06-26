@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Biblioteca\Controllers;
+namespace Vendas\Controllers;
 
 
 use Twig\Environment;
@@ -19,12 +19,9 @@ class Controller
         $this->twig = new Environment($this->loader);
     }
 
-    public function notFound()
-    {
 
-    }
 
-    public function dd($param)
+    function dd($param)
     {
         var_dump($param);
         die();
